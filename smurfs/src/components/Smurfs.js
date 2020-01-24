@@ -1,5 +1,6 @@
 import React from 'react';
-import SmurfCard from './SmurfCard'
+import SmurfCard from './SmurfCard';
+import SmurfCreator from './SmurfCreator';
 import { connect } from 'react-redux';
 import { fetchSmurfs } from '../actions/fetchSmurfs'
 
@@ -7,6 +8,7 @@ const Smurfs = props => {
   return (
     <div>
       <button onClick={props.fetchSmurfs}>Show Smurf Village</button>
+      <SmurfCreator />
       <SmurfCard smurfs={props.smurfs} />
     </div>
   )

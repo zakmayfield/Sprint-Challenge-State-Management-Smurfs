@@ -5,6 +5,12 @@ import {
   FETCH_SMURF_FAILURE
 } from '../actions/fetchSmurfs';
 
+import {
+  POST_SMURF_START,
+  POST_SMURF_SUCCESS,
+  POST_SMURF_FAILURE
+} from '../actions/postSmurf';
+
 const initialState = {
   isLoading: false,
   error: '',
@@ -32,6 +38,22 @@ export const reducer = (state = initialState, action) => {
         isLoading: false
       }
 
+
+    case POST_SMURF_START:
+      return{
+        ...state
+      }
+    case POST_SMURF_SUCCESS:
+      return{
+        ...state,
+        smurfs: action.payload,
+        error: ''
+      }
+    case POST_SMURF_FAILURE:
+      return{
+        ...state,
+        error: action.payload
+      }
     default:
       return state
   }
