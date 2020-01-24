@@ -1,5 +1,7 @@
 
 const initialState = {
+  isLoading: false,
+  error: '',
   smurfs: [
     {
       name: "Rocky",

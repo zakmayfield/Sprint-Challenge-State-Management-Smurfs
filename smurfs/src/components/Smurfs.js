@@ -1,13 +1,20 @@
 import React from 'react';
 import SmurfCard from './SmurfCard'
+import { connect } from 'react-redux';
 
-const Smurfs = () => {
+const Smurfs = props => {
   return (
     <div>
       <h2>Smurf Component</h2>
-      <SmurfCard />
+      <SmurfCard smurfs={props.smurfs} />
     </div>
   )
 }
 
-export default Smurfs
+const mapStateToProps = state => ({
+  isLoading: state.isLoading,
+  error: state.error,
+  smurfs: state.smurfs
+})
+
+export default connect(mapStateToProps, {})(Smurfs)
