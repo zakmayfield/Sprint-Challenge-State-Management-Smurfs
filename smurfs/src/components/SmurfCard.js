@@ -7,7 +7,7 @@ const SmurfCard = props => {
       <div>
         {
           props.smurfs.map(smurf => {
-            return <p>{smurf.name}</p>
+            return <p key={smurf.id}>{smurf.name}</p>
           })
         }
       </div>
