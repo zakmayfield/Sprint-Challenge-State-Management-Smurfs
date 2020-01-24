@@ -6,7 +6,12 @@ const SmurfCard = props => {
       <div>
         {
           props.smurfs.map(smurf => {
-            return <p key={smurf.id}>{smurf.name}</p>
+            return (
+              <div key={smurf.id} style={{borderBottom: '1px solid lightgray'}}>
+                <span style={{marginRight: '5vw'}}>{smurf.name}</span>
+                <span>Age: {smurf.age}</span>
+              </div>
+            )
           })
         }
       </div>

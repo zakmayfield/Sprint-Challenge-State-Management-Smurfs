@@ -18,7 +18,7 @@ const SmurfCreator = () => {
         initialValues={{
           name: '',
           age: '',
-          height: '',
+          height: ''
         }}
         onSubmit={(values, tools) => {
           tools.resetForm();
