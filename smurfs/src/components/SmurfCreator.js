@@ -22,9 +22,11 @@ const SmurfCreator = () => {
         }}
         onSubmit={(values, tools) => {
           tools.resetForm();
+          //values is collecting the data that the user inputs and then within the axios.post request we are passing our data to the endpoint given, along with the values of the inputs the user created
           axios.post('http://localhost:3333/smurfs', values)
             .then(res => {
-              console.log(res)
+              console.log('response from post: ', res)
+              console.log('values: ', values)
             })
             .catch(err => {
               console.log(err)
@@ -43,7 +45,7 @@ const SmurfCreator = () => {
                 />
               </label>
               {props.errors.name && props.touched.name ? (
-                  <span>{props.errors.name}</span>
+                  <span className="red">{props.errors.name}</span>
                 ) : (
                   ""
                 )}
@@ -57,7 +59,7 @@ const SmurfCreator = () => {
                 />
               </label>
               {props.errors.age && props.touched.age ? (
-                  <span>{props.errors.age}</span>
+                  <span className="red">{props.errors.age}</span>
                 ) : (
                   ""
                 )}
@@ -70,8 +72,8 @@ const SmurfCreator = () => {
                   placeholder="5cm"
                 />
               </label>
-              {props.errors.age && props.touched.age ? (
-                  <span>{props.errors.age}</span>
+              {props.errors.height && props.touched.height ? (
+                  <span className="red">{props.errors.height}</span>
                 ) : (
                   ""
                 )}
