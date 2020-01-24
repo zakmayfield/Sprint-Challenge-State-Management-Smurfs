@@ -5,7 +5,7 @@ import Smurfs from './components/Smurfs';
 function App() {
   return (
     <div className="App">
-      <h1>SMURFS! 2.0 W/ Redux</h1>
+      <h1>Smurf Town</h1>
       <Smurfs />
     </div>
   );

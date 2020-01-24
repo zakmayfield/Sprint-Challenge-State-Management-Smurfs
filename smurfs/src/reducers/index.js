@@ -39,17 +39,17 @@ export const reducer = (state = initialState, action) => {
       }
 
 
-    case POST_SMURF_START:
+    case 'POST_SMURF_STARTx':
       return{
         ...state
       }
-    case POST_SMURF_SUCCESS:
+    case 'POST_SMURF_SUCCESSx':
       return{
         ...state,
         smurfs: action.payload,
         error: ''
       }
-    case POST_SMURF_FAILURE:
+    case 'POST_SMURF_FAILUREx':
       return{
         ...state,
         error: action.payload

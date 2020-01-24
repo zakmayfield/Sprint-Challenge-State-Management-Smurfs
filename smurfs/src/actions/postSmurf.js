@@ -9,20 +9,20 @@ export const postSmurf = () => {
     dispatch({
       type: POST_SMURF_START
     })
-    axios.post('http://localhost:3333/smurfs')
-      .then(res => {
-        console.log(res)
-        dispatch({
-          type: POST_SMURF_SUCCESS,
-          payload: res.data
-        })
-      })
-      .catch(err => {
-        console.log(err)
-        dispatch({
-          type: POST_SMURF_FAILURE,
-          payload: err
-        })
-      })
+    // axios.post('http://localhost:3333/smurfs')
+    //   .then(res => {
+    //     console.log(res)
+    //     dispatch({
+    //       type: POST_SMURF_SUCCESS,
+    //       payload: res.data
+    //     })
+    //   })
+    //   .catch(err => {
+    //     console.log(err)
+    //     dispatch({
+    //       type: POST_SMURF_FAILURE,
+    //       payload: err
+    //     })
+    //   })
   }
 }

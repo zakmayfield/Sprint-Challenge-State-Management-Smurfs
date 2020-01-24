@@ -13,7 +13,7 @@ const SmurfCreator = () => {
 
   return (
     <div>
-      <h3>soon to be smurf creator form</h3>
+      <h3>Create your very own Smurf below</h3>
       <Formik
         initialValues={{
           name: '',
